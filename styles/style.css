@@ -1,0 +1,147 @@
+.tennis-ball {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 150px;
+  border: solid darkgray 1px;
+  border-radius: 50%;
+  background-color: #ebde2f;
+  transform: rotate(30deg);
+  animation-name: ball-horizontal-bounce, ball-vertical-bounce,
+    ball-rotate-bounce, ball-distort-bounce;
+  animation-duration: 4s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}
+
+.tennis-ball::before {
+  position: absolute;
+  content: "";
+  border: solid white 5px;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  left: -70%;
+}
+
+.tennis-ball::after {
+  position: absolute;
+  content: "";
+  border: solid white 5px;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  left: 70%;
+}
+
+@keyframes ball-horizontal-bounce {
+  0% {
+    left: 0px;
+  }
+  10% {
+    left: 200px;
+  }
+  20% {
+    left: 400px;
+  }
+  30% {
+    left: 600px;
+  }
+  40% {
+    left: 800px;
+  }
+  50% {
+    left: 1000px;
+  }
+  60% {
+    left: 800px;
+  }
+  70% {
+    left: 600px;
+  }
+  80% {
+    left: 400px;
+  }
+  90% {
+    left: 200px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+
+@keyframes ball-vertical-bounce {
+  0% {
+    top: 0px;
+  }
+  10% {
+    top: 700px;
+  }
+  20% {
+    top: 100px;
+  }
+  30% {
+    top: 700px;
+  }
+  40% {
+    top: 200px;
+  }
+  50% {
+    top: 700px;
+  }
+  60% {
+    top: 300px;
+  }
+  70% {
+    top: 700px;
+  }
+  80% {
+    top: 400px;
+  }
+  90% {
+    top: 700px;
+  }
+  100% {
+    top: 700px;
+  }
+}
+
+@keyframes ball-rotate-bounce {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(50deg) scaleX(1.2) scaleY(0.8);
+  }
+  20% {
+    transform: rotate(100deg);
+  }
+  30% {
+    transform: rotate(150deg) scaleX(1.2) scaleY(0.8);
+  }
+  40% {
+    transform: rotate(200deg);
+  }
+  50% {
+    transform: rotate(250deg) scaleX(1.2) scaleY(0.8);
+  }
+  60% {
+    transform: rotate(200deg);
+  }
+  70% {
+    transform: rotate(150deg) scaleX(1.2) scaleY(0.8);
+  }
+  80% {
+    transform: rotate(100deg);
+  }
+  90% {
+    transform: rotate(50deg) scaleX(1.1) scaleY(0.9);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
